@@ -905,4 +905,7 @@
     <!-- Fingerprint lockout -->
     <string name="fingerprint_lockout_title">Fingerabdrucksperre deaktivieren</string>
     <string name="fingerprint_lockout_summary">Deaktiviert das 30-Sekunden-Timeout sowie die dauerhafte Sperrung nach mehreren fehlgeschlagenen Fingerabdruck-Entsperrversuchen</string>
+
+    <!-- Refresh rate category name in Display Settings [CHAR LIMIT=none] -->
+    <string name="category_name_display_refresh_rate">Aktualisierungsrate</string>
 </resources>

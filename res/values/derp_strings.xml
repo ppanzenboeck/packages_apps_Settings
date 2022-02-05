@@ -968,4 +968,7 @@
     <!-- fingerprint lockout -->
     <string name="fingerprint_lockout_title">Disable fingerprint lockout</string>
     <string name="fingerprint_lockout_summary">Deactivates 30 second timeout as well as permanent lockout after multiple failed fingerprint unlock attempts</string>
+
+    <!-- Refresh rate category name in Display Settings [CHAR LIMIT=none] -->
+    <string name="category_name_display_refresh_rate">Refresh rate</string>
 </resources>
