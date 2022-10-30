@@ -35,4 +35,10 @@
 
     <!-- Turn on Wi-Fi automatically -->
     <bool name="config_wifi_wakeup" translatable="false">false</bool>
+
+    <!-- Whether or not to use traffic light enroll -->
+    <bool name="config_face_enroll_use_traffic_light">false</bool>
+
+    <!-- Traffic light package to use -->
+    <string name="config_face_enroll_traffic_light_package" translatable="false"></string>
 </resources>
