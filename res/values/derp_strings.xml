@@ -917,6 +917,9 @@
     <string name="transient_task_mode_allow">Enable (Some apps will stay)</string>
     <string name="transient_task_mode_force">Force (Override app behaviour)</string>
 
+    <!-- Face enroll -->
+    <string name="security_settings_face_enroll_finish_description">Now you can use your face to unlock your phone or verify it’s you, like when you sign in to apps or approve a purchase</string>
+
     <!-- Ambient wake toggles -->
     <string name="doze_gesture_ambient_title">Show Ambient</string>
     <string name="doze_gesture_ambient_summary">Show Ambient Display instead of fully waking the screen up</string>
