@@ -37,13 +37,13 @@
             android:key="navigation_bar_hint"
             android:title="@string/hide_navbar_gesture_bar_title"
             android:summary="@string/hide_navbar_gesture_bar_summary"
-            android:defaultValue="false" />
+            android:defaultValue="true" />
 
         <org.derpfest.support.preferences.SecureSettingSwitchPreference
             android:key="keyboard_no_navigation_bar"
             android:title="@string/keyboard_no_navigation_title"
             android:summary="@string/keyboard_no_navigation_summary"
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:dependency="navigation_bar_hint" />
     </PreferenceCategory>
 
@@ -74,7 +74,7 @@
             android:key="back_gesture_haptic"
             android:title="@string/back_gesture_haptic_title"
             android:summary="@string/back_gesture_haptic_summary"
-            android:defaultValue="false" />
+            android:defaultValue="true" />
     </PreferenceCategory>
 
     <PreferenceCategory

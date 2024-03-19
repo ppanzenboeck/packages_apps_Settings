@@ -64,7 +64,7 @@
         <CheckBoxPreference
             android:key="restart_systemui"
             android:title="@string/power_menu_restart_systemui_title"
-            android:defaultValue="false" />
+            android:defaultValue="true" />
 
     </PreferenceCategory>
 
@@ -76,7 +76,7 @@
             android:key="advanced_reboot"
             android:title="@string/power_menu_advanced_restart_title"
             android:summary="@string/power_menu_advanced_restart_summary"
-            android:defaultValue="false" />
+            android:defaultValue="true" />
 
     </PreferenceCategory>
 
