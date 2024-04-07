@@ -304,9 +304,14 @@ public class SystemNavigationGestureSettings extends RadioButtonPickerFragment i
     @VisibleForTesting
     void setCurrentSystemNavigationMode(IOverlayManager overlayManager, String key) {
         String overlayPackage = NAV_BAR_MODE_GESTURAL_OVERLAY;
+        boolean isTaskbarEnabled = Settings.System.getInt(getContext().getContentResolver(),
+        Settings.System.ENABLE_TASKBAR, isLargeScreen(getContext()) ? 1 : 0) == 1;
         switch (key) {
             case KEY_SYSTEM_NAV_GESTURAL:
                 overlayPackage = NAV_BAR_MODE_GESTURAL_OVERLAY;
+                if (isTaskbarEnabled){
+                    enableTaskbar();
+                }
                 break;
             case KEY_SYSTEM_NAV_2BUTTONS:
                 disableTaskbar();
@@ -316,6 +321,10 @@ public class SystemNavigationGestureSettings extends RadioButtonPickerFragment i
                 overlayPackage = NAV_BAR_MODE_3BUTTON_OVERLAY;
                 if (shouldDisableTaskbar()) {
                     disableTaskbar();
+                } else {
+                    if (isTaskbarEnabled){
+                        enableTaskbar();
+                    }
                 }
                 break;
         }
@@ -375,6 +384,11 @@ public class SystemNavigationGestureSettings extends RadioButtonPickerFragment i
         return Settings.Secure.getInt(getContext().getContentResolver(),
                 Settings.Secure.ACCESSIBILITY_BUTTON_MODE, /* def= */ -1)
                 == ACCESSIBILITY_BUTTON_MODE_FLOATING_MENU;
+    }
+
+    private boolean enableTaskbar() {
+        return Settings.System.putInt(getContext().getContentResolver(),
+                Settings.System.ENABLE_TASKBAR, 1);
     }
 
     private boolean disableTaskbar() {
